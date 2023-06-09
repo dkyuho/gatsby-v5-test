@@ -1,0 +1,41 @@
+{
+  "name": "gatsby-starter-blog",
+  "private": true,
+  "description": "A monorepo starter for a blog powered by Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "workspaces": [
+    "packages/01-layer/*",
+    "packages/02-layer/*",
+    "packages/03-layer/*",
+    "packages/04-layer/*",
+    "packages/05-layer/*",
+    "website"
+  ],
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+  },
+  "scripts": {
+    "build": "yarn workspace website gatsby build",
+    "devnode": "NODE_OPTIONS=--max-old-space-size=8192 yarn workspace website gatsby develop",
+    "dev": "yarn workspace website gatsby develop",
+    "prod": "yarn build && yarn serve",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "serve": "yarn workspace website gatsby serve",
+    "clean": "yarn workspace website gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  }
+}
